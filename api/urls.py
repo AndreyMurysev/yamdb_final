@@ -1,17 +1,16 @@
-from django.urls import path, include
-
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from .views import (AuthenticationViewSet,
-                    CommentViewSet,
-                    ReviewViewSet,
-                    admin_putch_get_delete_users,
-                    user_putch_get_user,
                     CategoryViewSet,
+                    CommentViewSet,
                     GenreViewSet,
                     LoginView,
+                    ReviewViewSet,
                     TitleViewSet,
-                    UserViewSet)
+                    UserViewSet,
+                    admin_putch_get_delete_users,
+                    user_putch_get_user)
 
 URL_VERSION = 'v1/'
 URL_REVIEW = r'titles/(?P<title_id>\d+)/reviews'
