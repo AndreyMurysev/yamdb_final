@@ -2,7 +2,7 @@ FROM python:3.8.5
 
 WORKDIR /code
 
-WORKDIR COPY requirements.txt /code
+COPY requirements.txt /code
 
 RUN pip3 install -r /code/requirements.txt
 
