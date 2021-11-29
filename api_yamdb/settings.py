@@ -15,7 +15,7 @@ SECRET_KEY = env('SECRET_KEY', default=None)
 
 DEBUG = False
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default='51.250.23.65')
+ALLOWED_HOSTS = env.list('HOST', default='*')
 
 AUTH_USER_MODEL = 'users.User'
 
