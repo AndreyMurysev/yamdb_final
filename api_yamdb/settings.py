@@ -11,11 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-SECRET_KEY = env('SECRET_KEY', default=None)
+SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['51.250.28.118', '*']
+ALLOWED_HOSTS = '*'
 
 AUTH_USER_MODEL = 'users.User'
 
