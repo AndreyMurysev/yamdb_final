@@ -95,7 +95,8 @@ docker-compose exec web python manage.py loaddata fixtures.json
  - https://github.com/Alexander_Niyazov
  - https://github.com/AndreyMurysev
 
-
+[![Django-app workflow](https://github.com/AndreyMurysev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
+(https://github.com/AndreyMurysev/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 Авторское право (c) 2021 AAA
 
