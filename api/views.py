@@ -51,10 +51,10 @@ class AuthenticationViewSet(viewsets.ModelViewSet):
                         headers=headers)
 
     def perform_create(self, serializer, email):
-        confirmation_code = get_random_string(length=LEN_COD_CONF)
+        conf_code = get_random_string(length=LEN_COD_CONF)
         serializer.save(
-            confirmation_code=confirmation_code)
-        self.send_message(confirmation_code, email)
+            confirmation_code=conf_code)
+        self.send_message(conf_code, email)
 
     def send_message(self, confirmation_code, email):
         send_mail(
