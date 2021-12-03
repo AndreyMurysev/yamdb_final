@@ -127,7 +127,7 @@ REST_FRAMEWORK = {
 
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 2525
-EMAIL_HOST_USER = env('132-9191@mail.ru)
+EMAIL_HOST_USER = env('132-9191@mail.ru')
 EMAIL_HOST_PASSWORD = env('98sunaveE')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
