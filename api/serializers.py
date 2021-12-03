@@ -19,7 +19,8 @@ class AuthenticationSerializer(serializers.ModelSerializer):
     def save(self, *args, **kwargs):
         user = User(
             email=self.validated_data['email'],
-            username=self.validated_data['username'], )
+            username=self.validated_data['username'],
+            confirmation_code=self.validate_data['confirmation_code'],)
         user.save()
         return user
 
