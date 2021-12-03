@@ -42,7 +42,7 @@ class AuthenticationViewSet(viewsets.ModelViewSet):
         return [permission() for permission in self.permission_classes]
 
     def perform_create(self, serializer):
-        email=serializer.validated_data['email']
+        email = serializer.validated_data['email']
         conf_code = get_random_string(length=LEN_COD_CONF)
         serializer.save(
             confirmation_code=conf_code)
