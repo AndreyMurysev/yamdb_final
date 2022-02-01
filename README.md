@@ -54,7 +54,7 @@ _Суперюзер Django должен всегда обладать права
 письмо с кодом подтверждения. Далее пользователь отправляет POST-запрос с параметрами username и confirmation_code на эндпоинт /api/v1/auth/token/, 
 в ответе на запрос ему приходит token (JWT-токен), как и при самостоятельной регистрации.
 
-### Запуск проекта
+## Запуск проекта
 
 - Клонировать репозиторий GitHub (не забываем создать виртуальное окружение и установить зависимости):
 [https://github.com/AndreyMurysev/yamdb_final/](https://github.com/AndreyMurysev/yamdb_final/)
@@ -128,7 +128,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 http://127.0.0.1/admin/
 ```
 
-Команда разработчиков:
+## Команда разработчиков:
  - https://github.com/AlexeyRudnev
  - https://github.com/Alexander_Niyazov
  - https://github.com/AndreyMurysev
