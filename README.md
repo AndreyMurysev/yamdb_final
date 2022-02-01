@@ -132,7 +132,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ### Подготовка и запуск проекта
 - Запуск проекта на локальной машине (описан ранее)
-- на локальном компьютере редактируем файл yamdb_final\.github\workflows\yamdb_workflow.yml
+- На локальном компьютере редактируем файл yamdb_final\.github\workflows\yamdb_workflow.yml
 - Выполните вход на свой удаленный сервер
 - Установите docker на сервер:
 
@@ -154,7 +154,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 - Отредактируйте файл nginx/default.conf и в строке server_name впишите свой IP
 - Скопируйте файлы docker-compose.yaml и nginx/default.conf из проекта на сервер:
-- 
+
 ```
 scp docker-compose.yaml <username>@<host>/home/<username>/docker-compose.yaml
 scp default.conf <username>@<host>/home/<username>/nginx/default.conf
@@ -163,8 +163,8 @@ scp default.conf <username>@<host>/home/<username>/nginx/default.conf
 
 - После успешного деплоя зайдите на боевой сервер и выполните команды миграции, создания суперпользователя и сбора статики (опиманы ранее):
 
-Проект будет доступен по адресу http://{ваш IP}/api/v1/
-Документация API http://{ваш IP}/redoc/
+**Проект будет доступен по адресу:** _http://{ваш IP}/api/v1/_
+**Документация API:** _http://{ваш IP}/redoc/_
 
 
 ## Команда разработчиков:
