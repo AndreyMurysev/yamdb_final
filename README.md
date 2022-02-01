@@ -42,9 +42,8 @@
 | Назначать роли пользователям | :x: | :x: | :heavy_check_mark: | :x: |
 | Удалять и редактировать любые отзывы и комментарии | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 
-
-    _Суперюзер Django должен всегда обладать правами администратора, пользователя с правами admin. Даже если изменить пользовательскую роль суперюзера 
-    — это не лишит его прав администратора. Суперюзер — всегда администратор, но администратор — не обязательно суперюзер._
+_Суперюзер Django должен всегда обладать правами администратора, пользователя с правами admin. Даже если изменить пользовательскую роль суперюзера 
+ — это не лишит его прав администратора. Суперюзер — всегда администратор, но администратор — не обязательно суперюзер._
 
 ## Создание пользователя администратором
 
@@ -92,7 +91,7 @@ ffbe984f7533   nginx:1.19.3                      "/docker-entrypoint.…"   3 we
 5166bcfb1188   yamdb:latest                      "/bin/sh -c 'gunicor…"   3 weeks ago   Up 3 weeks                                       andrey_murysev_web_1
 a9c7a7542ddb   postgres:12.4                     "docker-entrypoint.s…"   3 weeks ago   Up 3 weeks   5432/tcp                            andrey_murysev_db_1
 ```
-Назначение контейнеров:  
+_Назначение контейнеров_:  
 
 | IMAGES | NAMES | DESCRIPTIONS
 |:----------------:|:---------|:---------:|
@@ -108,10 +107,7 @@ docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
-Проект доступен по адресу:
-```
-http://127.0.0.1/admin/
-```
+
 - Описание команды для заполнения базы данными
     Для переноса данных с файла fixtures.json на PostgreSQL выполним несколько команд:
     ```
@@ -126,6 +122,10 @@ http://127.0.0.1/admin/
     ```
     docker-compose exec web python manage.py loaddata fixtures.json
     ```
+**Проект доступен по адресу:**
+```
+http://127.0.0.1/admin/
+```
 
 Команда разработчиков:
  - https://github.com/AlexeyRudnev
@@ -133,7 +133,7 @@ http://127.0.0.1/admin/
  - https://github.com/AndreyMurysev
 
 
-### Для связи с разработчиками :
+### Для связи с разработчиками:
 **email:** _andreimurysev@yandex.ru_  
 **telegram:** _@andrey_murysev_  
   
