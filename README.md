@@ -54,7 +54,7 @@ _Суперюзер Django должен всегда обладать права
 письмо с кодом подтверждения. Далее пользователь отправляет POST-запрос с параметрами username и confirmation_code на эндпоинт /api/v1/auth/token/, 
 в ответе на запрос ему приходит token (JWT-токен), как и при самостоятельной регистрации.
 
-## Запуск проекта
+## Запуск проекта на локальной машине
 
 - Клонировать репозиторий GitHub (не забываем создать виртуальное окружение и установить зависимости):
 [https://github.com/AndreyMurysev/yamdb_final/](https://github.com/AndreyMurysev/yamdb_final/)
@@ -123,10 +123,49 @@ docker-compose exec web python manage.py collectstatic --no-input
     ```
     docker-compose exec web python manage.py loaddata fixtures.json
     ```
-**Проект доступен по адресу:**
+## Запуск проекта на боевом сервере
+Запуск состоит из трех шагов:
+- Тестирование проекта flake8.
+- Сборка и публикация образа на DockerHub.
+- Автоматический деплой на удаленный сервер.
+- Отправка уведомления в телеграм.
+
+### Подготовка и запуск проекта
+- Запуск проекта на локальной машине (описан ранее)
+- на локальном компьютере редактируем файл yamdb_final\.github\workflows\yamdb_workflow.yml
+- Выполните вход на свой удаленный сервер
+- Установите docker на сервер:
+
+  ```
+  sudo apt install docker.io
+  ```
+  
+- Установите docker-compose на сервер:
+
+ ```
+ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ ```
+ 
+- Примените разрешения для исполняемого файла к двоичному файлу:
+
 ```
-http://127.0.0.1/admin/
+sudo chmod +x /usr/local/bin/docker-compose
 ```
+
+- Отредактируйте файл nginx/default.conf и в строке server_name впишите свой IP
+- Скопируйте файлы docker-compose.yaml и nginx/default.conf из проекта на сервер:
+- 
+```
+scp docker-compose.yaml <username>@<host>/home/<username>/docker-compose.yaml
+scp default.conf <username>@<host>/home/<username>/nginx/default.conf
+```
+- В настройках репозитория в разделе Actions secrets укажите все ключи из ранее созданного .env файла и yamdb_workflow.yml
+
+- После успешного деплоя зайдите на боевой сервер и выполните команды миграции, создания суперпользователя и сбора статики (опиманы ранее):
+
+Проект будет доступен по адресу http://{ваш IP}/api/v1/
+Документация API http://{ваш IP}/redoc/
+
 
 ## Команда разработчиков:
  - https://github.com/AlexeyRudnev
