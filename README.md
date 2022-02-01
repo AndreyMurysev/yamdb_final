@@ -8,7 +8,6 @@
 [![GitHub%20Actions](https://img.shields.io/badge/-GitHub%20Actions-464646?style=flat-square&logo=GitHub%20actions)](https://github.com/features/actions)
 [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)
 [![Django-app workflow](https://github.com/AndreyMurysev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
-(https://github.com/AndreyMurysev/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 ## Описание:
 
@@ -42,9 +41,9 @@
 | Создавать и удалять произведения, категории и жанры. | :x: | :x: | :heavy_check_mark: | :x: |
 | Назначать роли пользователям | :x: | :x: | :heavy_check_mark: | :x: |
 | Удалять и редактировать любые отзывы и комментарии | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-Аноним — может просматривать описания произведений, читать отзывы и комментарии.
 
-    _-Суперюзер Django должен всегда обладать правами администратора, пользователя с правами admin. Даже если изменить пользовательскую роль суперюзера 
+
+    _Суперюзер Django должен всегда обладать правами администратора, пользователя с правами admin. Даже если изменить пользовательскую роль суперюзера 
     — это не лишит его прав администратора. Суперюзер — всегда администратор, но администратор — не обязательно суперюзер._
 
 ## Создание пользователя администратором
@@ -60,6 +59,7 @@
 - Клонировать репозиторий GitHub (не забываем создать виртуальное окружение и установить зависимости):
 [https://github.com/AndreyMurysev/yamdb_final/](https://github.com/AndreyMurysev/yamdb_final/)
 
+```
 - Создать файл .env в папке проекта:
 EMAIL_HOST_USER=mail@mail.ru
 EMAIL_HOST_PASSWORD=gsdlfghl
@@ -72,9 +72,7 @@ DB_HOST=db
 DB_PORT=5432
 ALLOWED_HOSTS='*'
 ```
-
 - в Docker cоздаем образ :
-
 ```
 docker build -t yamdb .
 ```
