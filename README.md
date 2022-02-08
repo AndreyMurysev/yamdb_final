@@ -10,6 +10,14 @@
 [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)
 [![Django-app workflow](https://github.com/AndreyMurysev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
 
+## Системные требования:
+Python 3.9.7  
+Django 3.0.5 
+Django REST framework  3.11.0
+PyJWT 1.7.1
+Gunicorn 20.0.4  
+Nginx 1.19.3  
+
 ## Описание:
 
 В redoc указано все для работы с API. Проект создан для изучения DevOps метод и копирует исходный код из командного проекта
