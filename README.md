@@ -12,9 +12,9 @@
 
 ## Системные требования:
 Python 3.9.7  
-Django 3.0.5 
-Django REST framework  3.11.0
-PyJWT 1.7.1
+Django 3.0.5  
+Django REST framework  3.11.0  
+PyJWT 1.7.1  
 Gunicorn 20.0.4  
 Nginx 1.19.3  
 
